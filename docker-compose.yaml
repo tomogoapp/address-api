@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  nodb:
+    image: mongo:latest
+    restart: always
+    ports:
+      - ${MONGODB_PORTS}
+    environment:
+      MONGODB_DATABASE: ${MONGODB_NAME}
+    volumes:
+      - ./mongo:/data/db

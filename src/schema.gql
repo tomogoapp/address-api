@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type zipcodeResponseDTO {
+  d_codigo: String!
+  D_mnpio: String!
+  d_estado: String!
+  d_neighborn: [NeigbornDTO!]!
+}
+
+type NeigbornDTO {
+  id_asenta_cpcons: String!
+  d_asenta: String!
+}
+
+type Query {
+  locations(zipcode: String!): zipcodeResponseDTO!
+}
