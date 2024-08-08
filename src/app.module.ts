@@ -7,6 +7,7 @@ import { LocationsModule } from './locations/locations.module'
 import { GraphQLModule } from '@nestjs/graphql'
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
 import { join } from 'path'
+import { ReadXlsModule } from './read_xls/read_xls.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { join } from 'path'
       driver: ApolloDriver,
       autoSchemaFile:join(process.cwd(),'src/schema.gql')
     }),
+    ReadXlsModule,
   ],
   controllers: [],
   providers: [],
